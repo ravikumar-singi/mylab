@@ -1,0 +1,13 @@
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\obj\Debug\netcoreapp3.1\mylab.csprojAssemblyReference.cache
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\obj\Debug\netcoreapp3.1\mylab.csproj.CoreCompileInputs.cache
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\obj\Debug\netcoreapp3.1\mylab.AssemblyInfoInputs.cache
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\obj\Debug\netcoreapp3.1\mylab.AssemblyInfo.cs
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\bin\Debug\netcoreapp3.1\mylab.exe
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\bin\Debug\netcoreapp3.1\mylab.deps.json
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\bin\Debug\netcoreapp3.1\mylab.runtimeconfig.json
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\bin\Debug\netcoreapp3.1\mylab.runtimeconfig.dev.json
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\bin\Debug\netcoreapp3.1\mylab.dll
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\bin\Debug\netcoreapp3.1\mylab.pdb
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\obj\Debug\netcoreapp3.1\mylab.dll
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\obj\Debug\netcoreapp3.1\mylab.pdb
+C:\Users\ravikumar.singi\Documents\GitHub\mylab\obj\Debug\netcoreapp3.1\mylab.genruntimeconfig.cache
