@@ -12,8 +12,10 @@ namespace MyLeetCode
         static void Main(string[] args)
         {
             ReverseInteger rv = new ReverseInteger();
-           // long a = rv.Reverse(1534236469);
-            int ab = rv.Java_Reverse(-134236469);
+            // long a = rv.Reverse(1534236469);
+            // int ab = rv.Java_Reverse(-134236469);
+            FibonacciNumber fibonacci = new FibonacciNumber();
+            int ab=fibonacci.Fib(8);
             Trace.WriteLine(ab);
             //Console.ReadKey();
         }
