@@ -13,7 +13,7 @@ namespace MyLeetCode
         {
             ReverseInteger rv = new ReverseInteger();
            // long a = rv.Reverse(1534236469);
-            int ab = rv.Java_Reverse(1534236469);
+            int ab = rv.Java_Reverse(-134236469);
             Trace.WriteLine(ab);
             //Console.ReadKey();
         }
