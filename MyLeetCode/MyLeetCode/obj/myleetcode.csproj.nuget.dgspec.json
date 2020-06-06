@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\mylab\\myleetcode\\myleetcode.csproj": {}
+    "C:\\OneDrive\\OneDrive - Medtronic PLC\\Documents\\GitHub\\mylab\\myleetcode\\myleetcode\\myleetcode.csproj": {}
   },
   "projects": {
-    "C:\\mylab\\myleetcode\\myleetcode.csproj": {
+    "C:\\OneDrive\\OneDrive - Medtronic PLC\\Documents\\GitHub\\mylab\\myleetcode\\myleetcode\\myleetcode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\mylab\\myleetcode\\myleetcode.csproj",
+        "projectUniqueName": "C:\\OneDrive\\OneDrive - Medtronic PLC\\Documents\\GitHub\\mylab\\myleetcode\\myleetcode\\myleetcode.csproj",
         "projectName": "myleetcode",
-        "projectPath": "C:\\mylab\\myleetcode\\myleetcode.csproj",
+        "projectPath": "C:\\OneDrive\\OneDrive - Medtronic PLC\\Documents\\GitHub\\mylab\\myleetcode\\myleetcode\\myleetcode.csproj",
         "packagesPath": "C:\\Users\\ravikumar.singi\\.nuget\\packages\\",
-        "outputPath": "C:\\mylab\\myleetcode\\obj\\",
+        "outputPath": "C:\\OneDrive\\OneDrive - Medtronic PLC\\Documents\\GitHub\\mylab\\myleetcode\\myleetcode\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
