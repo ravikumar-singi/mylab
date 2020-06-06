@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyLeetCode
+namespace myleetcode
 {
     public class ReverseInteger
     {
@@ -12,23 +12,23 @@ namespace MyLeetCode
         {
             long given = x;
             long sign = Math.Sign(x);
-            x=Math.Abs(x);
-            long y =0;
+            x = Math.Abs(x);
+            long y = 0;
             long z = 0;
-           
-                while (x > 0)
-                {
-                    y = x % 10;
-                    z = (z * 10) + y;
-                    x = x / 10;
-                }
+
+            while (x > 0)
+            {
+                y = x % 10;
+                z = z * 10 + y;
+                x = x / 10;
+            }
 
             //if (x < 10)
             //{
             //    z = (z * 10) + y;
             //}
 
-            if (sign<0)
+            if (sign < 0)
                 return -z;
             else
                 return z;

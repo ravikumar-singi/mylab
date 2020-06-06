@@ -1,0 +1,13 @@
+C:\mylab\myleetcode\bin\Debug\netcoreapp3.1\myleetcode.exe
+C:\mylab\myleetcode\bin\Debug\netcoreapp3.1\myleetcode.deps.json
+C:\mylab\myleetcode\bin\Debug\netcoreapp3.1\myleetcode.runtimeconfig.json
+C:\mylab\myleetcode\bin\Debug\netcoreapp3.1\myleetcode.runtimeconfig.dev.json
+C:\mylab\myleetcode\bin\Debug\netcoreapp3.1\myleetcode.dll
+C:\mylab\myleetcode\bin\Debug\netcoreapp3.1\myleetcode.pdb
+C:\mylab\myleetcode\obj\Debug\netcoreapp3.1\myleetcode.csprojAssemblyReference.cache
+C:\mylab\myleetcode\obj\Debug\netcoreapp3.1\myleetcode.csproj.CoreCompileInputs.cache
+C:\mylab\myleetcode\obj\Debug\netcoreapp3.1\myleetcode.AssemblyInfoInputs.cache
+C:\mylab\myleetcode\obj\Debug\netcoreapp3.1\myleetcode.AssemblyInfo.cs
+C:\mylab\myleetcode\obj\Debug\netcoreapp3.1\myleetcode.dll
+C:\mylab\myleetcode\obj\Debug\netcoreapp3.1\myleetcode.pdb
+C:\mylab\myleetcode\obj\Debug\netcoreapp3.1\myleetcode.genruntimeconfig.cache
