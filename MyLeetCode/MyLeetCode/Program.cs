@@ -22,10 +22,15 @@ namespace myleetcode
 
             //AddBinary one = new AddBinary();
             //Console.WriteLine(one.AddBinaryMethod("1010", "1011"));
-            ReconstructQueue reconstructQueue = new ReconstructQueue();
-            int[][] a = new int[][]{new int[]{7,0},new int[]{4,4},
-            new int[]{7,1},new int[]{5, 0 }, new int[]{ 6, 1 }, new int[]{ 5, 2 } };
-            reconstructQueue.ReconstructedQueue(a);
+            // ReconstructQueue reconstructQueue = new ReconstructQueue();
+            // int[][] a = new int[][]{new int[]{7,0},new int[]{4,4},
+            // new int[]{7,1},new int[]{5, 0 }, new int[]{ 6, 1 }, new int[]{ 5, 2 } };
+            // reconstructQueue.ReconstructedQueue(a);
+
+            //            CountPrimesSolution countPrimes = new CountPrimesSolution();
+            PowerOfTwo p2 = new PowerOfTwo();
+            Console.WriteLine(p2.isPowerOfTwo(9));
+            // Console.WriteLine(countPrimes.CountPrimes(25));
         }
 
         static string ConvertStringArrayToStringJoin(int[] array)
