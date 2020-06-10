@@ -35,15 +35,19 @@ namespace myleetcode
             // BuddyString buddyString = new BuddyString();
             // Console.WriteLine(buddyString.IsBuddyStrings("ab", "bav"));
 
-            SearchInsertPosition sr = new SearchInsertPosition();
-            Console.WriteLine(sr.SearchInsert(new int[] { 1, 3, 5, 6 }, 7));
+            // SearchInsertPosition sr = new SearchInsertPosition();
+            // Console.WriteLine(sr.SearchInsert(new int[] { 1, 3, 5, 6 }, 7));
+
+            RemoveElementClass remove = new RemoveElementClass();
+            int[] nums = new int[] { 3, 2, 2, 3 };
+            Console.WriteLine(remove.RemoveElement(nums, 3));
 
         }
 
-        static string ConvertStringArrayToStringJoin(int[] array)
-        {
-            string result = string.Join(",", array);
-            return result;
-        }
+        // static string ConvertStringArrayToStringJoin(int[] array)
+        // {
+        //     string result = string.Join(",", array);
+        //     return result;
+        // }
     }
 }
