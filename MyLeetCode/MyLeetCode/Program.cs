@@ -28,9 +28,12 @@ namespace myleetcode
             // reconstructQueue.ReconstructedQueue(a);
 
             //            CountPrimesSolution countPrimes = new CountPrimesSolution();
-            PowerOfTwo p2 = new PowerOfTwo();
-            Console.WriteLine(p2.isPowerOfTwo(9));
+            //PowerOfTwo p2 = new PowerOfTwo();
+            //Console.WriteLine(p2.isPowerOfTwo(9));
             // Console.WriteLine(countPrimes.CountPrimes(25));
+            BuddyString buddyString = new BuddyString();
+            Console.WriteLine(buddyString.IsBuddyStrings("ab", "bav"));
+
         }
 
         static string ConvertStringArrayToStringJoin(int[] array)
