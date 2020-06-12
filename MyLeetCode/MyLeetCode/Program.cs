@@ -38,16 +38,20 @@ namespace myleetcode
             // SearchInsertPosition sr = new SearchInsertPosition();
             // Console.WriteLine(sr.SearchInsert(new int[] { 1, 3, 5, 6 }, 7));
 
-            RemoveElementClass remove = new RemoveElementClass();
-            int[] nums = new int[] { 3, 2, 2, 3 };
-            Console.WriteLine(remove.RemoveElement(nums, 3));
+            // RemoveElementClass remove = new RemoveElementClass();
+            // int[] nums = new int[] { 3,  2, 2, 3 };
+            // Console.WriteLine(remove.RemoveElement(nums, 3));
 
+            SortColorClass sortColor = new SortColorClass();
+            int[] nums = new int[] { 2, 0, 1 };
+            sortColor.SortColors(nums);
+            Console.WriteLine(ConvertStringArrayToStringJoin(nums));
         }
 
-        // static string ConvertStringArrayToStringJoin(int[] array)
-        // {
-        //     string result = string.Join(",", array);
-        //     return result;
-        // }
+        static string ConvertStringArrayToStringJoin(int[] array)
+        {
+            string result = string.Join(",", array);
+            return result;
+        }
     }
 }
