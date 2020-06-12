@@ -50,8 +50,11 @@ namespace myleetcode
             //  ToLowerClass toLowerClass = new ToLowerClass();
             //  Console.WriteLine(toLowerClass.ToLowerCase("HeLLeLuiAlo"));
 
-            ReverseVovels reverse = new ReverseVovels();
-            Console.WriteLine(reverse.ReverseVowels("LeetCode"));
+            //ReverseVovels reverse = new ReverseVovels();
+            //Console.WriteLine(reverse.ReverseVowels("LeetCode"));
+
+            IsomorphicStringsClass isomorphic = new IsomorphicStringsClass();
+            Console.WriteLine(isomorphic.IsIsomorphic("paper", "title"));
 
 
         }
