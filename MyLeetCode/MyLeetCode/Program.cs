@@ -47,10 +47,11 @@ namespace myleetcode
             // sortColor.SortColors(nums);
             // Console.WriteLine(ConvertStringArrayToStringJoin(nums));
 
-            ToLowerClass toLowerClass = new ToLowerClass();
-            Console.WriteLine(toLowerClass.ToLowerCase("HeLLeLuiAlo"));
+            //  ToLowerClass toLowerClass = new ToLowerClass();
+            //  Console.WriteLine(toLowerClass.ToLowerCase("HeLLeLuiAlo"));
 
-
+            ReverseVovels reverse = new ReverseVovels();
+            Console.WriteLine(reverse.ReverseVowels("LeetCode"));
 
 
         }
