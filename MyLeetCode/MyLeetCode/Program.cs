@@ -1,6 +1,4 @@
 ﻿using System;
-using MyLeetCode;
-
 namespace myleetcode
 {
     class Program
@@ -53,12 +51,19 @@ namespace myleetcode
             //ReverseVovels reverse = new ReverseVovels();
             //Console.WriteLine(reverse.ReverseVowels("LeetCode"));
 
-            IsomorphicStringsClass isomorphic = new IsomorphicStringsClass();
-            Console.WriteLine(isomorphic.IsIsomorphic("paper", "title"));
+            //  IsomorphicStringsClass isomorphic = new IsomorphicStringsClass();
+            // Console.WriteLine(isomorphic.IsIsomorphic("paper", "title"));
 
-
+            // RandomizedSetSolution obj = new RandomizedSetSolution();
+            // obj.CallRandomizedSetClass();
+            CheapestFlights cheapestFlights = new CheapestFlights();
+            Console.WriteLine(cheapestFlights.FindCheapestPrice(8, new int[][] { new int[] { 3, 4, 7 }, new int[] { 6, 2, 2 }, new int[] { 0, 2, 7 }, new int[] { 0, 1, 2 }, new int[] { 1, 7, 8 }, new int[] { 4, 5, 2 }, new int[] { 0, 3, 2 }, new int[] { 7, 0, 6 }, new int[] { 3, 2, 7 }, new int[] { 1, 3, 10 }, new int[] { 1, 5, 1 }, new int[] { 4, 1, 6 }, new int[] { 4, 7, 5 }, new int[] { 5, 7, 10 } }, 4, 3, 7));
         }
-
+        // 8
+        // [[3,4,7],[6,2,2],[0,2,7],[0,1,2],[1,7,8],[4,5,2],[0,3,2],[7,0,6],[3,2,7],[1,3,10],[1,5,1],[4,1,6],[4,7,5],[5,7,10]]
+        // 4
+        // 3
+        // 7
         static string ConvertStringArrayToStringJoin(int[] array)
         {
             string result = string.Join(",", array);
