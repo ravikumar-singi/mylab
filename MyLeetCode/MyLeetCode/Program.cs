@@ -68,8 +68,21 @@ namespace myleetcode
             // //  / \
             // // 1   3
             // Console.WriteLine(search.SearchBST(rootTreeNode, 5));
-            ValidateIP validateIP = new ValidateIP();
-            Console.WriteLine(validateIP.ValidIPAddress("12:12:12"));
+            // ValidateIP validateIP = new ValidateIP();
+            // Console.WriteLine(validateIP.ValidIPAddress("12:12:12"));
+
+            SurroundedRegions surrounded = new SurroundedRegions();
+            char[][] board = new char[][] { new char[] { 'X', 'X', 'X', 'X' }, new char[] { 'X', 'O', 'O', 'X' }, new char[] { 'X', 'X', 'O', 'X' }, new char[] { 'X', 'O', 'X', 'X' } };
+            surrounded.Solve(board);
+
+            foreach (var i in board)
+            {
+                foreach (var j in i)
+                {
+                    Console.Write(j);
+                }
+                Console.WriteLine(" ");
+            }
         }
 
         static string ConvertStringArrayToStringJoin(int[] array)
