@@ -5,7 +5,7 @@ namespace myleetcode
     {
         static void Main(string[] args)
         {
-            ReverseInteger rv = new ReverseInteger();
+            // ReverseInteger rv = new ReverseInteger();
             // long a = rv.Reverse(1534236469);
             // int ab = rv.Java_Reverse(-134236469);
             //FibonacciNumber fibonacci = new FibonacciNumber();
@@ -71,18 +71,22 @@ namespace myleetcode
             // ValidateIP validateIP = new ValidateIP();
             // Console.WriteLine(validateIP.ValidIPAddress("12:12:12"));
 
-            SurroundedRegions surrounded = new SurroundedRegions();
-            char[][] board = new char[][] { new char[] { 'X', 'X', 'X', 'X' }, new char[] { 'X', 'O', 'O', 'X' }, new char[] { 'X', 'X', 'O', 'X' }, new char[] { 'X', 'O', 'X', 'X' } };
-            surrounded.Solve(board);
+            // SurroundedRegions surrounded = new SurroundedRegions();
+            // char[][] board = new char[][] { new char[] { 'X', 'X', 'X', 'X' }, new char[] { 'X', 'O', 'O', 'X' }, new char[] { 'X', 'X', 'O', 'X' }, new char[] { 'X', 'O', 'X', 'X' } };
+            // surrounded.Solve(board);
 
-            foreach (var i in board)
-            {
-                foreach (var j in i)
-                {
-                    Console.Write(j);
-                }
-                Console.WriteLine(" ");
-            }
+            // foreach (var i in board)
+            // {
+            //     foreach (var j in i)
+            //     {
+            //         Console.Write(j);
+            //     }
+            //     Console.WriteLine(" ");
+            // }
+
+            PermutationSequence permutationSequence = new PermutationSequence();
+            Console.WriteLine(permutationSequence.GetPermutation(4, 9));
+
         }
 
         static string ConvertStringArrayToStringJoin(int[] array)
