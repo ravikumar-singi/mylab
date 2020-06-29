@@ -3,14 +3,14 @@ namespace myleetcode
 {
     public class HelloWorld
     {
-        static void Main()
-        {
-            System.Console.WriteLine("Hello World!");
-            int[] A = new int[6] { 2, 1, 5, 1, 3, 2 };
-            int k = 3;
-            Console.WriteLine(MaxSlidingWindow(A, k));
+        // static void Main()
+        // {
+        //     System.Console.WriteLine("Hello World!");
+        //     int[] A = new int[6] { 2, 1, 5, 1, 3, 2 };
+        //     int k = 3;
+        //     Console.WriteLine(MaxSlidingWindow(A, k));
 
-        }
+        // }
         public static int MaxSlidingWindow(int[] nums, int k)
         {
             int winSum = 0, maxSum = 0, startIndex = 0;
