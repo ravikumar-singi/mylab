@@ -8,14 +8,15 @@ namespace Leetcode
         {
             // int[] A = new int[4] { -2, -1, 2, 1 };
             // Console.WriteLine(MaxSubArrayLen(A, 1));
-            string s = "cbbebi";
             // Console.WriteLine("For the string {0} value is {1}", s, LongestSubstringKDistinct(s, 3));
             // Console.WriteLine("For the string {0} value is {1}", "araaci", LongestSubstringKDistinct("araaci", 2));
             // Console.WriteLine("For the string {0} value is {1}", "araaci", LongestSubstringKDistinct("araaci", 1));
             // Console.WriteLine("For the string {0} for k={1} result is {2}", "eceba", 2, LongestSubstringKDistinct("eceba", 2));
 
             // Console.WriteLine("For the string {0} for k={1} result is {2}", "aa", 1, LongestSubstringKDistinct("aa", 1));
-            Console.WriteLine("For the string {0} for k={1} result is {2} expected is 1", "a", 2, LongestSubstringKDistinct("a", 2));
+            //Console.WriteLine("For the string {0} for k={1} result is {2} expected is 1", "a", 2, LongestSubstringKDistinct("a", 2));
+            Console.WriteLine(" TotalFruit {0}", TotalFruit(new int[] { 0, 1, 2, 2 }));
+
         }
         public static IList<IList<int>> ThreeSumMethod(int[] nums)
         {
@@ -131,7 +132,45 @@ namespace Leetcode
 
             return maxLength;
         }
-    }
+        public static int TotalFruit(int[] tree)
+        {
+            if (tree == null || tree.Length == 0)
+                return 0;
 
+            int windowStart = 0, maxLength = 0;
+            Dictionary<int, int> map = new Dictionary<int, int>();
+            HashSet<int> set = new HashSet<int>();
+            for (int windowEnd = 0; windowEnd < tree.Length; windowEnd++)
+            {
+                if (map.ContainsKey(tree[windowEnd]))
+                    map[tree[windowEnd]] = map.GetValueOrDefault(tree[windowEnd], 0) + 1;
+                else
+                    map.Add(tree[windowEnd], 1);
+
+                if (!set.Contains(tree[windowEnd]))
+                {
+                    set.Add(tree[windowEnd]);
+                }
+
+                while (set.Count > 2 && windowStart < tree.Length)
+                {
+                    if (map.ContainsKey(tree[windowStart]))
+                        map[tree[windowStart]] = map.GetValueOrDefault(tree[windowStart], 0) - 1;
+                    else
+                        map.Add(tree[windowStart], 1);
+
+                    if (map[tree[windowStart]] == 0)
+                    {
+                        map.Remove(tree[windowStart]);
+                        set.Remove(tree[windowStart]);
+                    }
+                    windowStart++;
+                }
+                maxLength = Math.Max(maxLength, windowEnd - windowStart + 1);
+            }
+
+            return maxLength;
+        }
+    }
 }
 
