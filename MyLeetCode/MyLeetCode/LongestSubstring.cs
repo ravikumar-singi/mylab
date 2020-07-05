@@ -25,20 +25,23 @@ namespace Leetcode
             // Input: "abcabcbb"
             // Output: 3 
             // Explanation: The answer is "abc", with the length of 3.
-            Console.WriteLine(" LongestSubstring without repeating characters abcabcbb are {0} ", LongestSubstringWithoutRepeatingCharacters("abcabcbb"));
+            //            Console.WriteLine(" LongestSubstring without repeating characters abcabcbb are {0} ", LongestSubstringWithoutRepeatingCharacters("abcabcbb"));
             // Input: "bbbbb"
             // Output: 1
             // Explanation: The answer is "b", with the length of 1.
-            Console.WriteLine(" LongestSubstring without repeating characters bbbbb are {0} ", LongestSubstringWithoutRepeatingCharacters("bbbbb"));
+            //          Console.WriteLine(" LongestSubstring without repeating characters bbbbb are {0} ", LongestSubstringWithoutRepeatingCharacters("bbbbb"));
             // Input: "pwwkew"
             // Output: 3
             // Explanation: The answer is "wke", with the length of 3. 
             // Note that the answer must be a substring, "pwke" is a subsequence  and not a substring.
-            Console.WriteLine(" LongestSubstring without repeating characters pwwkew are {0} ", LongestSubstringWithoutRepeatingCharacters("pwwkew"));
+            //        Console.WriteLine(" LongestSubstring without repeating characters pwwkew are {0} ", LongestSubstringWithoutRepeatingCharacters("pwwkew"));
             // Input: "dvdf"
             // Output: 3
             // Explanation: The answer is "vdf", with the length of 3. 
-            Console.WriteLine(" LongestSubstring without repeating characters dvdf are {0} ", LongestSubstringWithoutRepeatingCharacters("dvdf"));
+            // Console.WriteLine(" LongestSubstring without repeating characters dvdf are {0} ", LongestSubstringWithoutRepeatingCharacters("dvdf"));
+            //Console.WriteLine(" Length Of Longest Substring Two Distinct eceba are {0} ", LengthOfLongestSubstringTwoDistinct("eceba"));
+            Console.WriteLine(" Length Of Longest Substring Two Distinct ccaabbb are {0} ", LengthOfLongestSubstringTwoDistinct("ccaabbb"));
+
 
         }
         public static int LongestSubstringWithAtleastKRepeatingCharacters(string s, int k)
@@ -81,7 +84,6 @@ namespace Leetcode
             return maxLength;
         }
 
-
         public static int LongestSubstringWithoutRepeatingCharacters(string s)
         {
             int start = 0, maxLen = 0, end = 0;
@@ -105,5 +107,38 @@ namespace Leetcode
             }
             return maxLen;
         }
+
+        public static int LengthOfLongestSubstringTwoDistinct(string s)
+        {
+            int start = 0, maxLength = 0;
+            HashSet<char> set = new HashSet<char>();
+            Dictionary<char, int> map = new Dictionary<char, int>();
+            for (int end = 0; end < s.Length; end++)
+            {
+                if (map.ContainsKey(s[end]))
+                    map[s[end]] = map.GetValueOrDefault(s[end]) + 1;
+                else
+                    map.Add(s[end], 1);
+
+                if (!set.Contains(s[end]))
+                    set.Add(s[end]);
+
+                while (set.Count > 2 && start < s.Length)
+                {
+                    map[s[start]] = map.GetValueOrDefault(s[start]) - 1;
+                    if (map.GetValueOrDefault(s[start]) == 0)
+                    {
+                        map.Remove(s[start]);
+                        set.Remove(s[start]);
+                    }
+                    start++;
+                }
+                maxLength = Math.Max(maxLength, end - start + 1);
+            }
+            return maxLength;
+        }
+
+
+
     }
 }
