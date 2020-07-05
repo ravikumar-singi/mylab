@@ -4,20 +4,20 @@ namespace Leetcode
 {
     public class ThreeSum
     {
-        public static void Main()
-        {
-            // int[] A = new int[4] { -2, -1, 2, 1 };
-            // Console.WriteLine(MaxSubArrayLen(A, 1));
-            // Console.WriteLine("For the string {0} value is {1}", s, LongestSubstringKDistinct(s, 3));
-            // Console.WriteLine("For the string {0} value is {1}", "araaci", LongestSubstringKDistinct("araaci", 2));
-            // Console.WriteLine("For the string {0} value is {1}", "araaci", LongestSubstringKDistinct("araaci", 1));
-            // Console.WriteLine("For the string {0} for k={1} result is {2}", "eceba", 2, LongestSubstringKDistinct("eceba", 2));
+        //     public static void Main()
+        //     {
+        //         // int[] A = new int[4] { -2, -1, 2, 1 };
+        //         // Console.WriteLine(MaxSubArrayLen(A, 1));
+        //         // Console.WriteLine("For the string {0} value is {1}", s, LongestSubstringKDistinct(s, 3));
+        //         // Console.WriteLine("For the string {0} value is {1}", "araaci", LongestSubstringKDistinct("araaci", 2));
+        //         // Console.WriteLine("For the string {0} value is {1}", "araaci", LongestSubstringKDistinct("araaci", 1));
+        //         // Console.WriteLine("For the string {0} for k={1} result is {2}", "eceba", 2, LongestSubstringKDistinct("eceba", 2));
 
-            // Console.WriteLine("For the string {0} for k={1} result is {2}", "aa", 1, LongestSubstringKDistinct("aa", 1));
-            //Console.WriteLine("For the string {0} for k={1} result is {2} expected is 1", "a", 2, LongestSubstringKDistinct("a", 2));
-            Console.WriteLine(" TotalFruit {0}", TotalFruit(new int[] { 0, 1, 2, 2 }));
+        //         // Console.WriteLine("For the string {0} for k={1} result is {2}", "aa", 1, LongestSubstringKDistinct("aa", 1));
+        //         //Console.WriteLine("For the string {0} for k={1} result is {2} expected is 1", "a", 2, LongestSubstringKDistinct("a", 2));
+        //         Console.WriteLine(" TotalFruit {0}", TotalFruit(new int[] { 0, 1, 2, 2 }));
 
-        }
+        //     }
         public static IList<IList<int>> ThreeSumMethod(int[] nums)
         {
             List<List<int>> result = new List<List<int>>();
