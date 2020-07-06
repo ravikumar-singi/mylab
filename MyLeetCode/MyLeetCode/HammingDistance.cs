@@ -2,10 +2,10 @@ namespace Leetcode
 {
     public class HammingDistance
     {
-        public static void Main()
-        {
-            System.Console.WriteLine("HammingDistanceMethod between {0} and {1} is {2}", 1, 4, HammingDistanceMethod(1, 4));
-        }
+        // public static void Main()
+        // {
+        //     System.Console.WriteLine("HammingDistanceMethod between {0} and {1} is {2}", 1, 4, HammingDistanceMethod(1, 4));
+        // }
         public static int HammingDistanceMethod(int x, int y)
         {
             // System.Numerics.BitOperations.PopCount(x)
