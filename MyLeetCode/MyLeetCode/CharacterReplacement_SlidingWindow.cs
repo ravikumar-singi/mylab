@@ -9,14 +9,14 @@ namespace MyLeetCode
     */
     public class CharacterReplacement_SlidingWindow
     {
-        static void Main()
-        {
-            Console.WriteLine("Longest repeating substring s={0} with K={1} operations is{2}", "ABAB", 2, CharacterReplacement("ABAB", 2));
-            Console.WriteLine("Longest repeating substring s={0} with K={1} operations is{2}", "AABABBA", 1, CharacterReplacement("AABABBA", 1));
-            Console.WriteLine("Longest repeating substring s={0} with K={1} operations is{2}", "AABA", 0, CharacterReplacement("AABA", 0));
-            Console.WriteLine("Longest repeating substring s={0} with K={1} operations is{2}", "ABAA", 0, CharacterReplacement("ABAA", 0));
-            Console.WriteLine("Longest repeating substring s={0} with K={1} operations is{2}", "ABCDE", 1, CharacterReplacement("ABCDE", 1));
-        }
+        // static void Main()
+        // {
+        //     Console.WriteLine("Longest repeating substring s={0} with K={1} operations is{2}", "ABAB", 2, CharacterReplacement("ABAB", 2));
+        //     Console.WriteLine("Longest repeating substring s={0} with K={1} operations is{2}", "AABABBA", 1, CharacterReplacement("AABABBA", 1));
+        //     Console.WriteLine("Longest repeating substring s={0} with K={1} operations is{2}", "AABA", 0, CharacterReplacement("AABA", 0));
+        //     Console.WriteLine("Longest repeating substring s={0} with K={1} operations is{2}", "ABAA", 0, CharacterReplacement("ABAA", 0));
+        //     Console.WriteLine("Longest repeating substring s={0} with K={1} operations is{2}", "ABCDE", 1, CharacterReplacement("ABCDE", 1));
+        // }
         public static int CharacterReplacement(string s, int k)
         {
             int start = 0, maxLen = 0, maxRepeatingCharCount = 0;

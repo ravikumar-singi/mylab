@@ -4,8 +4,10 @@ namespace Leetcode
 {
     public class ThreeSum
     {
-        //     public static void Main()
-        //     {
+        private const int V = 0;
+
+        // public static void Main()
+        // {
         //         // int[] A = new int[4] { -2, -1, 2, 1 };
         //         // Console.WriteLine(MaxSubArrayLen(A, 1));
         //         // Console.WriteLine("For the string {0} value is {1}", s, LongestSubstringKDistinct(s, 3));
@@ -17,7 +19,37 @@ namespace Leetcode
         //         //Console.WriteLine("For the string {0} for k={1} result is {2} expected is 1", "a", 2, LongestSubstringKDistinct("a", 2));
         //         Console.WriteLine(" TotalFruit {0}", TotalFruit(new int[] { 0, 1, 2, 2 }));
 
+        //Console.WriteLine("Threesum for the given array [-2,0,1,1,2]");
+        //IList<IList<int>> lists = ThreeSum1(new int[] { -1, 0, 1, 2, -1, -4 });
+        // IList<IList<int>> lists = ThreeSum1(new int[] { -2, 0, 1, 1, 2 });
+        // foreach (var list in lists)
+        // {
+        //     foreach (var i in list)
+        //     {
+        //         Console.Write(i);
         //     }
+        //     Console.WriteLine("\n");
+        // }
+
+        // Console.WriteLine("Threesum for the given array [-1, 0, 1, 2, -1, -4]");
+        // IList<IList<int>> lists1 = ThreeSum1(new int[] { -1, 0, 1, 2, -1, -4 });
+        // foreach (var list in lists1)
+        // {
+        //     foreach (var i in list)
+        //     {
+        //         Console.Write(i);
+        //     }
+        //     Console.WriteLine("\n");
+        // }
+
+
+        //     Console.WriteLine("Threesum for the given array [0,0]");
+        //     IList<IList<int>> lists2 = ThreeSum1(new int[] { 0 });
+        //     IList<IList<int>> lists3 = threeSum(new int[] { 0 });
+        //     IList<IList<int>> lists = new List<IList<int>>();
+        //     Console.WriteLine(lists);
+
+        // }
         public static IList<IList<int>> ThreeSumMethod(int[] nums)
         {
             List<List<int>> result = new List<List<int>>();
@@ -170,6 +202,106 @@ namespace Leetcode
             }
 
             return maxLength;
+        }
+
+        //[-1,0,1,2,-1,-4]
+        public static bool isZeroArray(int[] nums)
+        {
+            bool result = false;
+            foreach (var i in nums)
+            {
+                if (i != 0)
+                {
+                    result = false;
+                }
+            }
+            return result;
+        }
+        public static IList<IList<int>> ThreeSum1(int[] nums)
+        {
+            bool isEmpty = false;
+            foreach (var i in nums)
+            {
+                if (i == 0)
+                    isEmpty = true;
+
+                else
+                    isEmpty = false;
+            }
+            IList<IList<int>> lists = new List<IList<int>>();
+
+            if (isEmpty)
+            {
+                lists.Add(new List<int>());
+                return lists;
+            }
+
+
+
+
+            int start = 0, end = 0;
+            Array.Sort(nums);
+
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                //start = i + 1;
+                start = i;
+                end = nums.Length - 1;
+                if (i > 0 && nums[i] == nums[i - 1])
+                    continue;
+
+                while (start < end)
+                {
+                    // if (end < nums.Length - 1 && nums[end] == nums[end - 1])
+                    // {
+                    //     end--;
+                    //     continue;
+                    // }
+                    if (nums[i] + nums[start] + nums[end] == 0)
+                    {
+                        //return the 
+                        lists.Add(new List<int> { nums[i], nums[start], nums[end] });
+                        start++; end--;
+                    }
+                    else if (nums[i] + nums[start] + nums[end] < 0)
+                    {
+                        //increment start
+                        start++;
+                    }
+                    else if (nums[i] + nums[start] + nums[end] > 0)
+                    {
+                        //increment start
+                        end--;
+                    }
+                }
+                Console.WriteLine("Print i={0}", i);
+            }
+            return lists;
+        }
+
+        public static IList<IList<int>> threeSum(int[] nums)
+        {
+            Array.Sort(nums);
+            IList<IList<int>> res = new List<IList<int>>();
+            for (int i = 0; i < nums.Length && nums[i] <= 0; ++i)
+                if (i == 0 || nums[i - 1] != nums[i])
+                    twoSumII(nums, i, res);
+            return res;
+        }
+        static void twoSumII(int[] nums, int i, IList<IList<int>> res)
+        {
+            int lo = i + 1, hi = nums.Length - 1;
+            while (lo < hi)
+            {
+                int sum = nums[i] + nums[lo] + nums[hi];
+                if (sum < 0 || (lo > i + 1 && nums[lo] == nums[lo - 1]))
+                    ++lo;
+                else if (sum > 0 || (hi < nums.Length - 1 && nums[hi] == nums[hi + 1]))
+                    --hi;
+                else
+                    res.Add(new List<int> { nums[i], nums[lo++], nums[hi--] });
+            }
         }
     }
 }
