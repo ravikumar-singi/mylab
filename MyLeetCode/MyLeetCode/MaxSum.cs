@@ -27,5 +27,20 @@ namespace myleetcode
             }
             return maxSum;
         }
+
+        public static int FindMaxConsecutiveOnes(int[] nums)
+        {
+            int windStart = 0, maxCount = 0;
+            for (int windEnd = 0; windEnd < nums.Length; windEnd++)
+            {
+                if (nums[windEnd] == 0)
+                {
+                    //shrink window & reset maxcount
+                    windStart = windEnd + 1;
+                }
+                maxCount = Math.Max(maxCount, windEnd - windStart + 1);
+            }
+            return maxCount;
+        }
     }
 }
