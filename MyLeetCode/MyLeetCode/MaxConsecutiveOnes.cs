@@ -20,8 +20,8 @@ public class MaxConsecutiveOnes
     // Output: 4
     // Explanation: Flip the first zero will get the the maximum number of consecutive 1s. After flipping, the maximum number of consecutive 1s is 4.
 
-    public int FindMaxConsecutiveOnesPart2(int[] nums)
-    {
+    // public int FindMaxConsecutiveOnesPart2(int[] nums)
+    // {
 
-    }
+    // }
 }
