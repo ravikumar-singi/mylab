@@ -7,8 +7,8 @@ namespace Leetcode
     {
         public static void Main()
         {
-            string s = "()[]{[}";
-            Console.WriteLine("Given expression{0},{1}", s, IsValid(s));
+            // string s = "()[]{[}";
+            // Console.WriteLine("Given expression{0},{1}", s, IsValid(s));
         }
         public static bool IsValid(string s)
         {

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections;
+using System;
+
 namespace myleetcode
 {
     class AddBinary
@@ -22,6 +24,15 @@ namespace myleetcode
             if (carry != 0)
                 sb.Append(carry);
             return new string(sb.ToString().Reverse().ToArray());
+        }
+
+        public string AddBin(string a, string b)
+        {
+            string s = Convert.ToString(
+                Convert.ToInt32(
+                    (Convert.ToInt32("11", 2) + Convert.ToInt32("1", 2)).ToString(), 2)
+                    );
+            return s;
         }
     }
 }
