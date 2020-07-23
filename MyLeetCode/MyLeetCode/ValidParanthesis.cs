@@ -5,11 +5,11 @@ namespace Leetcode
 {
     public class ValidParanthesis
     {
-        public static void Main()
-        {
-            // string s = "()[]{[}";
-            // Console.WriteLine("Given expression{0},{1}", s, IsValid(s));
-        }
+        // public static void Main()
+        // {
+        //     // string s = "()[]{[}";
+        //     // Console.WriteLine("Given expression{0},{1}", s, IsValid(s));
+        // }
         public static bool IsValid(string s)
         {
             var sck = new Stack();
