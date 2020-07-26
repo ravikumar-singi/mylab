@@ -138,7 +138,56 @@ namespace Leetcode
             return maxLength;
         }
 
+        /*
+          Search a substring of given length
+          that occurs at least 2 times.
+          Return start position if the substring exits and -1 otherwise.
+          */
+        public int Search(int L, int n, String S)
+        {
+            HashSet<int> seen = new HashSet<int>();
+            String tmp;
+            int h;
+            for (int start = 0; start < n - L + 1; ++start)
+            {
+                tmp = S.Substring(start, start + L);
+                h = tmp.GetHashCode();
+                if (seen.Contains(h)) return start;
+                seen.Add(h);
+            }
+            return -1;
+        }
 
+        public int LongestRepeatingSubstring(String S)
+        {
+            int n = S.Length;
+            // binary search, L = repeating string length
+            int left = 1, right = n;
+            int L;
+            while (left <= right)
+            {
+                L = left + (right - left) / 2;
+                if (Search(L, n, S) != -1) left = L + 1;
+                else right = L - 1;
+            }
+            return left - 1;
+        }
+
+        //      public string[] ReorderLogFiles(string[] logs) {
+        //         Array.Sort(logs, (log1, log2) -> {
+        //         String[] split1 = log1.split(" ", 2);
+        //         String[] split2 = log2.split(" ", 2);
+        //         boolean isDigit1 = char.IsDigit(split1[1][0]);
+        //         boolean isDigit2 = char.IsDigit(split2[1][0]);
+        //         if (!isDigit1 && !isDigit2) {
+        //             int cmp = split1[1].compareTo(split2[1]);
+        //             if (cmp != 0) return cmp;
+        //             return split1[0].compareTo(split2[0]);
+        //         }
+        //         return isDigit1 ? (isDigit2 ? 0 : 1) : -1;
+        //     });
+        //     return logs;
+        // }
 
     }
 }
