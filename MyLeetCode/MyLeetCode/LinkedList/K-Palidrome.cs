@@ -104,16 +104,52 @@ namespace Leetcode
         // Driver code 
         public static void Main(String[] args)
         {
-            String str = "cccabbcccbdcaaabbcdbddccaddccbabbabdbaaabbbbdcabacccbbdbbbdbdcdd";
-            int k = 1;
-            if (IsValidPalindrome(str, k))
+            // String str = "cccabbcccbdcaaabbcdbddccaddccbabbabdbaaabbbbdcabacccbbdbbbdbdcdd";
+            // int k = 1;
+            // if (IsValidPalindrome(str, k))
+            // {
+            //     Console.WriteLine("true");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("false");
+
+            // }
+            string[] words = new string[] { "practice", "makes", "perfect", "coding", "makes" };
+            string word1 = "makes", word2 = "coding";
+            Console.WriteLine(ShortestDistance(words, word1, word2));
+        }
+
+        public static int ShortestDistance(string[] words, string word1, string word2)
+        {
+            if (word1.Equals(word2))
             {
-                Console.WriteLine("true");
+                return 0;
             }
-            else
+
+            // assume total length of the string as  
+            // minimum distance  
+            int min_dist = words.Length + 1;
+
+            // Find the first occurrence of any of the two  
+            // numbers (w1 or w2) and store the index of  
+            // this occurrence in prev  
+            int word1pos = -1, word2pos = -1;
+            for (int i = 0; i < words.Length; i++)
             {
-                Console.WriteLine("false");
+                if (words[i].Equals(word1))
+                {
+                    word1pos = i;
+                }
+
+                if (words[i].Equals(word2))
+                {
+                    word2pos = i;
+                }
+                if (word1pos != -1 && word2pos != -1)
+                    min_dist = Math.Min(min_dist, Math.Abs(word2pos - word1pos));
             }
+            return min_dist;
         }
     }
 }
